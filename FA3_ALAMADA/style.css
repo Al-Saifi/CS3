@@ -1,0 +1,49 @@
+body{
+	 background-image: url("image.jpg"); 
+     background-repeat: no-repeat; 
+     background-position:center ; 
+     background-attachment:fixed;
+	 background-size:100%;
+	 }
+
+
+
+h1{
+	color:#FF0000; font-family:"Verdana";
+	text-align:center;
+	width:250px;
+     border-style:dotted;
+	 padding-bottom:10px;
+	 padding-top:10px;
+	 padding-left:15px;
+	 padding-right:15px;
+	 border-color:blue;
+	 margin: auto;
+	 background-color:yellow;
+     margin-bottom:20px;
+}
+p{
+	background-color:green;
+	color:hsl(168, 80%, 52%);
+	width:500px;
+	border-color: 3px black;
+    border-padding:50px;
+	border:3px solid black;
+    margin: auto;
+	border-bottom-style:dashed;
+	border-top-style:dotted;
+	border-left-style:double;
+	border-right-style:solid;
+	text-align:center;
+	font-style:italic;
+}
+p>span{
+	color:RGB(0, 0, 255);
+	font-weight:bold;
+    font-style:italic;
+
+	margin-left:2px;
+	margin-right:5px;
+
+
+}
