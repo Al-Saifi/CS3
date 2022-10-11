@@ -36,6 +36,7 @@ p{
 	border-right-style:solid;
 	text-align:center;
 	font-style:italic;
+	border-padding: 200px;
 }
 p>span{
 	color:RGB(0, 0, 255);
