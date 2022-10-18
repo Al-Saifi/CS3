@@ -36,8 +36,9 @@ p{
 	border-right-style:solid;
 	text-align:justify;
 	font-style:italic;
-	border-padding: 200px;
+	padding: 20px;
 	text-align:justify;
+	
 }
 p>span{
 	color:RGB(0, 0, 255);
