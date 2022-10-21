@@ -1,0 +1,94 @@
+*{
+			box-sizing:border box;
+			font-family:"Times New Roman", Times, serif;
+}
+body{ 
+			margin:0;
+}
+.header{
+			border: 1px solid black;
+			margin:0;
+			padding:0;
+			height:100%;
+			width:100%;
+			overflow:auto;
+			
+	}
+.logo{
+			float:left;
+}
+h2{
+			font-size:30px;
+			text-decoration:none;
+}
+#h21{ 		
+			border:1px solid black;
+			height:40px;
+			position:absolute;
+			width:180x;
+			left:580px;
+}
+#h22{ 		
+			border:1px solid black;
+			height:40px;
+			position:absolute;
+			width:250px;
+			left:720px;
+}
+#h23{ 		
+			border:1px solid black;
+			height:40px;
+			position:absolute;
+			width:150px;
+			left:1200px;
+}
+.title{
+			text-align:center;
+			
+}
+.whole{
+			height:322px;
+}
+.section{
+			float:left;
+			width:50%;
+			margin-top:10px;
+			margin:bottom:10px;
+}
+.article{
+			float:right;
+			width:50%;
+			margin-top:10px;
+			margin-bottom:10px;
+}
+img{
+			
+			float:left;
+			overflow:auto;
+}
+#gwapo{
+				border:1px solid black;
+				position:absolute;
+				width:100px;
+				color:blue;
+				font-size:20px;
+				left:795px;
+}
+#sir{
+				border:1px solid black;
+				position:absolute;
+				width:90px;
+				color:blue;
+				font-size:20px;
+				left:900px;
+				
+				
+}
+#jimmy{
+				border:1px solid black;
+				position:absolute;
+				width:85px;
+				color:blue;
+				font-size:20px;
+				left:1000px;
+}
