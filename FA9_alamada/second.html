@@ -1,0 +1,27 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jimmy`s Soldiers</title>
+	</head>		
+	<body>
+		<button onclick="change()"> Salute ng mga Pogi </button>
+		<button onclick="revert()"> Attention ng mga Pogi </button>
+		<br><br><br>
+		<img id="origpic" src="images/attention.jpeg" alt="ATTENTION PICTURE"></img>
+	<style>
+		img{
+				height:500px;
+				width:450px;
+			}
+	</style>
+	<script>
+		function change(){
+			document.getElementById("origpic").src = "images/salute.jpeg";
+			}
+		function revert(){
+			document.getElementById("origpic").src = "images/attention.jpeg";
+			}
+	</script>
+	</body>
+</html>
