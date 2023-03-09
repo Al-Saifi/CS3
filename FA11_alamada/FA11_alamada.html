@@ -3,23 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 	</head>
+	<body>
 	<script>
-		var x= prompt("Enter The Length Of 1st Side");
-		var y= prompt("Enter The Length Of 2nd Side");
-		var z= prompt("Enter The Length Of 3rd Side");
-		function determineTriangle(){
-			if(x == y && y == z){
-				document.write("The Triangle is EQUILATERAL");
-				}
-			else if(x == y || y == z || z == x){
-				document.write("The Triangle is ISOSCELES");
-				}
-			else{				
-				document.write("The Triangle is SCALENE");
-				}
-		}
-		determineTriangle();
-		
+			var x= prompt("Enter The Length Of 1st Side");
+			var y= prompt("Enter The Length Of 2nd Side");
+			var z= prompt("Enter The Length Of 3rd Side");
+			function determineTriangle(a,b,c){
+				if(a == b && b == c ){
+					document.write("The Triangle is EQUILATERAL");
+					}
+				else if(a == b || b == c || c == a){
+					document.write("The Triangle is ISOSCELES");
+					}
+				else{				
+					document.write("The Triangle is SCALENE");
+					}
+			}
+			determineTriangle(x,y,z);
 	</script>
 	</body>
 </html>
