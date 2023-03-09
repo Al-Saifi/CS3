@@ -1,0 +1,16 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<script>
+		var random = (Math.random() * 1000).toFixed(0);
+		var ones = random % 10;
+		var tens = (random % 100) - (ones);
+		var hundreds =  (random % 1000) - (ones + tens);
+		document.write("RANDOMLY GENERATED NUMBERS:" + random + "<br>");
+		document.write("BREAKDOWN: " + hundreds + "," + " " + tens + "," + " " + ones);
+	</script>
+	</body>
+</html>
