@@ -26,21 +26,23 @@
 	
 		/* creating a function that generates a random string of digits of a specified length */
 
-		const generateOTP = (length = 4) => {
-			let otp = ''
+		var generateOTP = (length = 4) => {
+			var otp = ''
 				
-			for (let i = 0; i < length; i++) {
+			for (var i = 0; i < length; i++) {
 			otp += Math.floor(Math.random() * 10)
 		}
 
 		return otp
 		}
 		
-		/* declaring var x as the generated OTP with a length of 6 */
-		var x = generateOTP(6);
+		/* declaring var x; */
+		var x;
 		
 		/* creating the 3 functions for onclick and onload */
 		function body(){
+		/* declaring x as a random string with 6 specified length */
+			x = generateOTP(6);
 			document.getElementById("otp").innerHTML = x;
 			}
 		
@@ -55,11 +57,13 @@
 				}
 			else{
 				alert("The OTP You Entered Is Incorrect");
-				window.location.reload();
+				body();
 				}
 			}
 
     </script>
 </body>
 </html>
+
+
 
