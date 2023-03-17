@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<meta charset="utf-8">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick="button()"> Click here to enter your name </button>
+	
+	<!-- adding onclick="button()" -->
+    
+	<script>
+			
+			function button(){
+			/* using prompt to ask for the user`s full name */
+				var x = prompt("Enter Your Full Name");
+				document.getElementById("thename").innerHTML = x;
+			
+			/* declaring variable y as x.length and z as y */
+				var y = x.length;
+				var z = y;
+			
+			/* creating a loop where z will never be greater than 9 */
+				while(z > 9){
+					 (z = (z -(z%10))/ 10 + (z%10));
+					}
+			
+			/* Switch For z To Indicate Our Output For Fortune */
+				switch(z){
+					case 1:
+						document.getElementById("fortune").innerHTML = "Your Soul Will Meet Its Mate";
+					break;
+					case 2:
+						document.getElementById("fortune").innerHTML = "The One You Like Doesn`t Like You Back";
+					break;
+					case 3:
+						document.getElementById("fortune").innerHTML = "Satan Is Waiting For You";
+					break;
+					case 4:
+						document.getElementById("fortune").innerHTML = "Sir Jimmy Is Waiting For You";
+					break;
+					case 5:
+						document.getElementById("fortune").innerHTML = "There`s Something You Want To Releases: Your Poop";
+					break;
+					case 6:
+						document.getElementById("fortune").innerHTML = "You Have Fallen	";
+					break;
+					case 7:
+						document.getElementById("fortune").innerHTML = "Your Family Will Never Give You Up";
+					break;
+					case 8:
+						document.getElementById("fortune").innerHTML = "Miss Ka Na Niya";
+					break;
+					case 9:
+						document.getElementById("fortune").innerHTML = "They Will Let You Down";
+					break;
+					}
+				}
+    </script>
+    
+</body>
+</html>
