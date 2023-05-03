@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ALAMADA</title>
+  </head>
+  <body>
+    <script>
+      function Hi(){
+	  // Makes the genetic code table a javascript object
+      var genetics = {
+		AUG: "Met",
+        UUU: "Phe",
+        UUC: "Phe",
+        UUA: "Leu",
+        UUG: "Leu",
+        UCU: "Ser",
+        UCC: "Ser",
+        UCA: "Ser",
+        UCG: "Ser",
+        UAU: "Tyr",
+        UAC: "Tyr",
+        UGU: "Cys",
+        UGC: "Cys",
+        UGG: "Trp",
+        UAA: "STOP",
+        UAG: "STOP",
+        UGA: "STOP",
+		CUU: "Leu",
+        CUC: "Leu",
+        CUA: "Leu",
+        CUG: "Leu",
+        CCU: "Pro",
+        CCC: "Pro",
+        CCA: "Pro",
+        CCG: "Pro",
+        CAU: "His",
+        CAC: "His",
+        CAA: "Gln",
+        CAG: "Gln",
+        CGU: "Arg",
+        CGC: "Arg",
+        CGA: "Arg",
+        CGG: "Arg",
+        AUU: "Ile",
+        AUC: "Ile",
+        AUA: "Ile",
+        AUG: "Met",
+        ACU: "Thr",
+        ACC: "Thr",
+        ACA: "Thr",
+        ACG: "Thr",
+        AAU: "Asn",
+        AAC: "Asn",
+        AAA: "Lys",
+        AAG: "Lys",
+        AGU: "Ser",
+        AGC: "Ser",
+        AGA: "Arg",
+        AGG: "Arg",
+        GUU: "Val",
+        GUC: "Val",
+        GUA: "Val",
+        GUG: "Val",
+		GCU: "Ala",
+        GCC: "Ala",
+        GCA: "Ala",
+        GCG: "Ala",
+        GAU: "Asp",
+        GAC: "Asp",
+        GAA: "Glu",
+        GAG: "Glu",
+        GGU: "Gly",
+        GGC: "Gly",
+        GGA: "Gly",
+        GGG: "Gly"
+	};
+		var x = 0;
+		const mRNA = prompt("Enter the mRNA sequence:").toUpperCase();
+		const regex = /^[ACGU]+$/i;
+		if(!regex.test(mRNA)){
+			document.write("That Is Not A Genetic Code");
+			return;			
+		}
+      
+      // Find the first codon and establish the omni
+      var firstCodon = mRNA.indexOf("AUG");
+	  var string = mRNA.length;
+      var omni = mRNA.substring(firstCodon);
+	  if (firstCodon != -1){
+     
+      // Divide the succeeding sequence by 3 to identify the next codon
+      var codons = [];
+      for (var i = 0; i < omni.length; i += 3) {
+        var codon = omni.substring(i, i + 3);
+        codons.push(codon);
+        
+        // if statement that stops the program when a stop codon is met
+        if (codon == "UAA" || codon == "UAG" || codon == "UGA") {
+          break;
+        }
+		if (codon.length != 3){
+			document.write("Genetic Code Incomplete Or Does Not Have Stop Codon");
+			return;
+		}
+		}
+	
+
+		// Translate each codon to its corresponding amino acid
+		var amino = [];
+		for (var i = 0; i < codons.length; i++) {
+			var codon = codons[i];
+			var acids = "Unknown";
+        if (codon in genetics) {
+			acids = genetics[codon];
+        }
+        amino.push(acids);
+		}
+      
+		// Display the codons and their corresponding amino acids
+		document.write("[" + codons.map(codon => `"${codon}"`)	.join(", ") + "]<br>");
+		for (var i = 0; i < amino.length; i++) {
+			document.write(codons[i] + " --> " + amino[i] + "<br>");
+		}
+		}
+	  else{
+		alert("No Staring Codon");
+	}
+	}
+	Hi();
+    </script>
+  </body>
+</html>
