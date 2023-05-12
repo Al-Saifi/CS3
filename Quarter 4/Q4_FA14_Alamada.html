@@ -132,7 +132,7 @@
 
       <div class="input"><br>
         <input type="submit" value="Submit">
-        <input type="reset" value="Reset" onclick="reset()">
+        <input type="reset" value="Reset" onclick="reset()" id="resetButton">
       </div>
     </fieldset>
   </form>
@@ -140,6 +140,7 @@
   <fieldset id="output"></fieldset>
 
   <script>
+	var output = document.getElementById('output');
     function checkInput(element) {
       if (element.value === '') {
         element.classList.add('error');
@@ -149,34 +150,38 @@
     }
 
     function validate(element) {
-      element.classList.remove('error');
-      element.classList.remove('success');
+		element.classList.remove('error');
+		element.classList.remove('success');
     }
 
     function reset() {
-      document.getElementById('form').reset();
-      document.getElementById('output').innerHTML = '';
-    }
-
+		document.getElementById('form').reset();
+		output.innerHTML = ' ';
+	}
+	
+    document.getElementById('resetButton').addEventListener('click', function() {
+      reset();
+    });
+	
     document.getElementById('form').addEventListener('submit', function(event) {
-      event.preventDefault();
+    event.preventDefault();
+		
 
-      var name = document.getElementById('name').value;
-      var username = document.getElementById('username').value;
-      var gender = document.getElementById('gender').value;
-      var password = document.getElementById('password').value;
-      var email = document.getElementById('email').value;
-      var address = document.getElementById('address').value;
-      var likes = document.getElementById('likes').value;
-	  var output = document.getElementById('output');
-      output.innerHTML = '<legend>Information:</legend>';
-      output.innerHTML += '<div><span id="out">Name:</span> ' + name + '</div>';
-      output.innerHTML += '<div><span id="out">Username:</span> ' + username + '</div>';
-      output.innerHTML += '<div><span id="out">Gender:</span> ' + gender + '</div>';
-      output.innerHTML += '<div><span id="out">Password:</span> ' + password + '</div>'; 
-	  output.innerHTML += '<div><span id="out">Email:</span> ' + email + '</div>';
-      output.innerHTML += '<div><span id="out">Address:</span> ' + address + '</div>';
-      output.innerHTML += '<div><span  id="out">Likes:</span>' + likes + '</div>';
+    var name = document.getElementById('name').value;
+    var username = document.getElementById('username').value;
+    var gender = document.getElementById('gender').value;
+    var password = document.getElementById('password').value;
+    var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
+    var likes = document.getElementById('likes').value;
+    output.innerHTML = '<legend>Information:</legend>';
+    output.innerHTML += '<div><span id="out">Name:</span> ' + name + '</div>';
+    output.innerHTML += '<div><span id="out">Username:</span> ' + username + '</div>';
+    output.innerHTML += '<div><span id="out">Gender:</span> ' + gender + '</div>';
+    output.innerHTML += '<div><span id="out">Password:</span> ' + password + '</div>'; 
+	output.innerHTML += '<div><span id="out">Email:</span> ' + email + '</div>';
+    output.innerHTML += '<div><span id="out">Address:</span> ' + address + '</div>';
+    output.innerHTML += '<div><span  id="out">Likes:</span>' + likes + '</div>';
     });
   </script>
 </body>
